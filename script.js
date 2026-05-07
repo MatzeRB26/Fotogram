@@ -1,11 +1,11 @@
-const photos = document.getElementById("image_collection");
+// #region Photocollection //
+const photos_1 = document.getElementById("image_collection");
 
-for (let i = 1; i < 12; i++){
+for (let i = 0; i < 12; i++){
 
 const item = document.createElement("div");
 
-item.classList.add("collection");
-
+item.classList.add("image_collection");
 
 const img = document.createElement("img");
 
@@ -15,20 +15,31 @@ img.height = 150;
 
 item.appendChild(img);
 
-photos.appendChild(item);
+photos_1.appendChild(item);}
+// #endregion //
+
+// #region button //
+
+const dialogRef = document.getElementById("overlay");
+
+let headerRef = document.getElementById("overlay_header");
+let sectionRef = document.getElementById("overlay_section");
+let footerRef = document.getElementById("overlay_footer");
+
+function showImg(index){
+    dialogRef.showModal();
+
+    headerRef.innerHTML = /*html*/`
+        <p class="jdm">${arrImage_collection[index]}</p>
+    `
+    sectionRef.innerHTML = /*html*/`
+        <div class="japan_imgs">
+            <img src="./assets/img/${arrImage_collection[index]}.jpg" alt="">
+        </div>
+    `
 }
 
-
-// "./assets/img/370z_drift.jpg"
-// "./assets/img/engine_rb26.jpg"
-// "./assets/img/fish_koi.jpg"
-// "./assets/img/nissan_370z.jpg"
-// "./assets/img/nissan_r32.jpg"
-// "./assets/img/nissan_r33.jpg"
-// "./assets/img/nissan_r34.jpg"
-// "./assets/img/tokyo_bridge.jpg"
-// "./assets/img/tokyo_fuji.jpg"
-// "./assets/img/tokyo_night.jpg"
-// "./assets/img/tokyo_shibuya.jpg"
-// "./assets/img/tokyo_skyline.jpg"
-
+function closeOverlayPopup(){
+    dialogRef.close();
+}
+// #endregion //

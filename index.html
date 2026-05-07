@@ -4,8 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Fotogram</title>
-        <link rel="stylesheet" href="style.css"/>
         <link rel="icon" href="./assets/icons/miniflower.svg">
+        <link rel="stylesheet" href="standart.css">
+        <link rel="stylesheet" href="style.css"/>
         <script src="script.js" defer></script>
     </head>
     <body>
@@ -20,6 +21,18 @@
                 Your personal photo album
             </h1>
             <div id="image_collection"></div>
+        
+        
+        <dialog id="overlay">
+        <div id="overlay_popup">
+        <header class="overlay_content" id="overlay_header"></header>
+        <section class="overlay_content" id="overlay_section"></section>
+        <footer class="overlay_content" id="overlay_footer">
+        <button onclick="closeOverlayPopup()">close</button>
+        </footer>
+        </div>
+        </dialog>
+        
         </main>
         <footer>
             <div class="icon_text">
