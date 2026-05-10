@@ -4,43 +4,66 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Fotogram</title>
-        <link rel="icon" href="./assets/icons/miniflower.svg">
-        <link rel="stylesheet" href="standart.css">
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="icon" href="./assets/icons/miniflower.svg" />
         <script src="script.js" defer></script>
+        <link rel="stylesheet" href="standart.css" />
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <header>
             <div class="fotogram_pic">
-                <img src="./assets/icons/Fotogramlogo.png" alt="fotogramlogo"/>
+                <img class="icon" src="./assets/icons/fotogram_icon.svg" alt="">
+                <img class="text" src="./assets/icons/fotogram_header.png" alt="">
             </div>
         </header>
+        <div class="container">
         <main>
-            <section class="headline">
-            <h1>
-                Your personal photo album
-            </h1>
-            <div id="image_collection"></div>
-        
-        
-        <dialog id="overlay">
-        <div id="overlay_popup">
-        <header class="overlay_content" id="overlay_header"></header>
-        <section class="overlay_content" id="overlay_section"></section>
-        <footer class="overlay_content" id="overlay_footer">
-        <button onclick="closeOverlayPopup()">close</button>
-        </footer>
-        </div>
-        </dialog>
-        
+            <section class="gallery">
+                <h1>Your personal photo album</h1>
+                <div id="image_collection" class="image_collection"></div>
+                <dialog id="overlay">
+                    <div id="overlay_popup">
+                        <div class="overlay_header">
+                            <h2 id="overlay_title"></h2>
+                            <img
+                                id="close_button"
+                                src="./assets/icons/close.svg"
+                                alt=""
+                            />
+                        </div>
+
+                        <img id="overlay_content_img" />
+
+                        <div class="overlay_footer">
+                            <button id="backbutton">
+                            <img
+                                src="./assets/icons/Buttonleft.svg"
+                                alt="Arrow_left"
+                            />
+                            </button>
+                            <span id="counter"> 1 / 12 </span>
+                            <button id="nextbutton">
+                                <img
+                                    src="./assets/icons/Buttonright.svg"
+                                    alt="Arrow_right"
+                                />
+                            </button>
+                        </div>
+                    </div>
+                </dialog>
+            </section>
         </main>
+        </div>
         <footer>
             <div class="icon_text">
-                <img src="./assets/icons/PC_icon.svg" alt="da_pc">
-                <img src="./assets/icons/DA_text.svg" alt="da_text">
+                <img src="./assets/icons/PC_icon.svg" alt="da_pc" />
+                <img src="./assets/icons/DA_text.svg" alt="da_text" />
             </div>
             <div class="copyright_text">
-            <img src="./assets/icons/© 2023 Developer Akademie GmbH.svg" alt="">
+                <img
+                    src="./assets/icons/© 2023 Developer Akademie GmbH.svg"
+                    alt=""
+                />
             </div>
         </footer>
     </body>
