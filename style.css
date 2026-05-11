@@ -26,6 +26,15 @@ header {
     background-color: rgba(9, 33, 42, 1);
 }
 
+@media screen and (max-width: 768px) {
+    header{
+        .fotogram_pic{
+            justify-content: center;
+            padding: 0;
+        }
+    }
+}
+
 .fotogram_pic {
     width: 1440px;
     padding: 20px 120px;
@@ -36,7 +45,6 @@ header {
         padding-right: 10px;
     }
 }
-
 
 .gallery {
     display: flex;
@@ -80,25 +88,22 @@ header {
     }
 }
 
-@media screen and (max-width: 768px) {
-    #image_collection {
-        padding-top: 55px;
-        padding-bottom: 50px;
-    }
-}
+
 /* #endregion */
 
 /* #region Popupwindow */
 
 #overlay {
+    width: 100%;
+    height: 100dvh;
     inset: 0;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.8);
     display: none;
-    display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 5000;
+    margin: auto;
 }
 
 #overlay_title {
@@ -134,9 +139,30 @@ font-family: "figtree";
         padding: 0px 45px;
 
         img {
-            width: 32px;
-            height: 32px;
+            width: 13.5px;
+            height: 13.5px;
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #overlay_popup{
+        height: 600px;
+        width: 580px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #overlay_popup{
+        height: 665px;
+        width: 343px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #overlay_popup{
+        height: 380px;
+        width: 300px;
     }
 }
 
@@ -146,6 +172,29 @@ font-family: "figtree";
     object-fit: contain;
 }
 
+@media screen and (max-width: 768px) {
+    #overlay_content_img{
+        width: 530px;
+        height: 280px;
+        
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #overlay_content_img{
+        width: 300px;
+        height: 375px;
+        
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #overlay_content_img{
+        width: 210px;
+        height: 150px;
+        
+    }
+}
 .overlay_footer{
     display: flex;
     justify-content: center;
@@ -160,12 +209,36 @@ font-family: "figtree";
     }
 }
 
+@media screen and (max-width: 375px) {
+    .overlay_footer{
+        width: 300px;
+        height: 280px;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .overlay_footer{
+        width: 300px;
+        height: 280px;
+        gap: 15px;
+    }
+}
+
 .overlay_footer button{
     height: 70px;
     width: 70px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+    .overlay_footer button{
+        width: 58px;
+        height: 58px;
+        
+    }
 }
 
 .overlay_footer button:hover{
@@ -194,9 +267,6 @@ footer {
     background-size: cover;
     background-position: center;
     flex-direction: column;
-    position: absolute;
-    bottom: 0;
-    position: fixed;
 }
 
 .icon_text {
